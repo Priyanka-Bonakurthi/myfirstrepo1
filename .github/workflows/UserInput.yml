@@ -30,6 +30,6 @@ jobs:
        uses: actions/checkout@v4
      - name: Add numbers
        id: add
-       run: echo "::set-output name=sum ${{input.number1+input.number2}}"
+       run: echo "::set-output name=sum ${{input.number1}} + ${{input.number2}}"
      - name: Display sum
        run: echo "The sum of ${{input.number1}} and ${{input.number2}} is {{steps.add.output.sum}}"
