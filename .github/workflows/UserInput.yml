@@ -27,8 +27,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-     name: Add numbers
-     id: add
-     run: echo "::set-output name=sum ${{input.number1+input.number2}}"
-     name: Display sum
-     run: echo "The sum of ${{input.number1}} and  ${{input.number2}} is {{steps.add.output.sum}}"
+     - name: Add numbers
+       id: add
+       run: echo "::set-output name=sum ${{input.number1+input.number2}}"
+     - name: Display sum
+       run: echo "The sum of ${{input.number1}} and  ${{input.number2}} is {{steps.add.output.sum}}"
